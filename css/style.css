@@ -1,0 +1,7 @@
+.searchCustomer{
+    margin:7px 5px !important;
+}
+
+.dataCustomerCapitalize {
+    text-transform: capitalize
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Login test Sipay</title>
+        <!-- Bootstrap is included in its original form, unaltered -->
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <!-- Login Container -->
+        <div class="cont">
+        <!-- AQUI EL CONTENIDO -->           
+            <div class="demo">
+
+              <div class="login">
+                <div class="login__check"></div>
+                <div class="login__form">
+                  <div class="login__row">
+                    <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+                      <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+                    </svg>
+                    <input id="name" type="text" class="login__input name" placeholder="Username"/>
+                  </div>
+                  <div class="login__row">
+                    <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+                      <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+                    </svg>
+                    <input id="pass" type="password" class="login__input pass" placeholder="Password"/>
+                  </div>
+                  <div class="login__row" id="info">
+                    <div class="msgError">Usuario y contraseña no válidos</div>
+                  </div>
+                  <button type="button" class="login__submit">Entrar</button>
+                </div>
+
+              </div>
+              
+              <div class="app">
+                <div class="app__logout">
+                  <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+                    <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+
+        <!-- HASTA AQUI EL CONTENIDO -->
+
+        </div>
+        <!-- END Login Container -->
+
+        <script src="libs/jquery-3.1.1.js"></script>
+
+        <!-- Load and execute javascript code used only in this page -->
+        <script src="js/index.js"></script>
+    </body>
+</html>

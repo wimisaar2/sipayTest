@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Data Table</title>
+  <link href="libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="libs/bootstrap-3.3.7/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+  <link href="libs/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body >
+<div ng-app="appmain">
+
+	<div class="col-lg-12" ng-controller="contentDataTable">
+		<div class="row">
+			<form class="searchCustomer">
+			    <div class="form-group">
+			      <div class="input-group">
+			        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+			        <input type="text" class="form-control" placeholder="Buscar cliente" ng-model="searchCustomer">
+			      </div>      
+			    </div>
+			</form>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Genre</th>
+						<th>Fullname</th>
+						<th>Address</th>
+						<th>Phone</th>
+						<th>Nationality</th>
+						<th>Registered Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="data in dataTable.results | filter:searchCustomer">
+						<td><img src="{{data.picture.thumbnail}}"/></td>
+						<td><i class="fa " aria-hidden="true" ng-class="{'fa-venus':data.gender=='female', 'fa-mars':data.gender=='male'}"></i></td>
+						<td class="dataCustomerCapitalize">{{data.name.title}}. {{data.name.first}} {{data.name.last}}</td>
+						<td>{{data.location.street}}, {{data.location.city}}</td>
+						<td>{{data.phone}}</td>
+						<td>{{data.nat}}</td>
+						<td>{{data.registered}}</td>
+					</tr>
+				</tbody>
+			</table>
+		<div>		
+	</div>	
+</div>
